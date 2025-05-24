@@ -1,0 +1,52 @@
+/* DataTable.css */
+.TransactionPage {
+  display: grid;
+  grid-template-columns: 80px 1fr;
+  grid-template-rows: 100px 1fr;
+  grid-template-areas: 
+    'sidebar header'
+    'sidebar trans';  
+  min-height: 1000px;
+}
+
+.tttt{
+  grid-area: trans;
+  position:absolute;
+  right:35px;
+  left:70px;
+  top:90px;
+  margin-left: 50px;
+}
+  label {
+    font-weight: bold;
+    margin-right: 10px;
+  }
+  
+  select {
+    padding: 8px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    color: black;
+  }
+  
+  table th,
+  table td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  table th {
+    background-color: #f0f0f0;
+    color: #333;
+  }
+  
+  

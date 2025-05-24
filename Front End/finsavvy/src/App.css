@@ -1,0 +1,361 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: gray;
+  color: #9e9ea4;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.icon {
+  vertical-align: middle;
+  line-height: 1px;
+  font-size: 15px;
+}
+.icon_header {
+  vertical-align: middle;
+  line-height: 1px;
+  font-size: 20px;
+}
+.icon, .icon_header {
+  margin-right: 5px;
+}
+
+.close_icon {
+  color: red;
+  margin-left: 30px;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 80px 1fr;
+  grid-template-rows: 0.2fr 3fr;
+  grid-template-areas:
+    'sidebar header'
+    'sidebar main';
+  height: 100vh;
+}
+
+/* Header  */
+.header {
+  grid-area: header;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content:end;
+  padding: 0 30px 0 30px;
+  box-shadow: 0 6px 7px -3px rgba(0, 0, 0, 0.35);
+  background-color: white;
+}
+
+.menu-icon {
+  display: none;
+}
+/* End Header  */
+
+/* Sidebar  */
+#sidebar {
+  grid-area: sidebar;
+  height: 100%;
+  background-color: white;
+  overflow-y: auto;
+  transition: all 0.5s;
+  -webkit-transition: all 0.5s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.sidebar-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px 0px 30px;
+  margin-bottom: 30px;
+}
+
+.sidebar-title > span {
+  display: none;
+}
+
+.sidebar-brand {
+  margin-top: 15px;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.sidebar-list {
+  padding: 0;
+  list-style-type: none;
+  background-color: gray;
+  border-radius: 20px;
+}
+
+.sidebar-list-item {
+  padding: 10px;
+  margin: 5px;
+  font-size: 18px;
+  border-radius: 10px;
+}
+
+.sidebar-list-item:hover {
+  background-color: white;
+  cursor: pointer;
+}
+
+.sidebar-list-item > a {
+  text-decoration: none;
+  color: #9e9ea4;
+}
+
+.sidebar-responsive {
+  display: inline !important;
+  position: absolute;
+  /*
+    we want the z-index of the sidebar higher so that
+    the charts are not showing over the sidebar 
+    on small screens
+  */
+  z-index: 12 !important;
+}
+
+/* End Sidebar  */
+
+
+/* Main  */  
+.main-container {
+  grid-area: main;
+  overflow-y: auto;
+  padding: 20px;
+  color: rgba(255, 255, 255, 0.95);
+  display: grid;
+  grid-template-columns: 250px 250px 1fr 1fr; /* Four equal-width columns */
+  grid-template-rows: repeat(3, 1fr); /* Three equal-height rows */
+  gap: 20px; /* Gap between grid items */
+  grid-template-areas:
+    'planner planner planner planner'
+    'calendar credit bar pie'
+    'cash transaction transaction stock';
+  background-color: #f9f9fd;
+}
+
+.carousel-container {
+  grid-area: planner;
+  background-color: white;
+  padding: 10px;
+  padding-right: 0px;
+  border-radius: 10px;
+}
+
+.carousel-container h5{
+  font-size:medium;
+}
+
+.carousel-container h6{
+  font-size:small;
+}
+.calendar {
+  grid-area: calendar;
+  border: none;
+  border-radius: 10px;
+}
+
+.transaction {
+  grid-area: transaction;
+  color: black;
+  background-color: white;
+  padding: 10px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  border-radius: 5px;
+}
+
+.stock {
+  grid-area: stock;
+  color: black;
+  background-color: white;
+  padding: 10px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  border-radius: 5px;
+}
+
+.main-title {
+  display: flex;
+  justify-content: space-between;
+}
+
+.main-cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 20px;
+  padding: 10px;
+  border-radius: 5px;
+  background-color: white;
+}
+
+/*.charts {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  margin-top: 60px;
+  height: 300px;
+  min-width: 500px;
+  grid-area: chart;
+}
+*/
+
+.bar {
+  grid-area: bar;
+  padding-left: -100px;
+  color: black;
+}
+
+.pie {
+  grid-area: pie;
+  min-width: 250px;
+}
+
+.creditCards {
+  color: black;
+  grid-area: credit;
+  background-color: white;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  padding: 10px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.creditCards button {
+  background-color: blueviolet;
+  color: white;
+  border-radius: 5px;
+  border: none;
+  width: 80%;
+  min-height: 10%;
+}
+
+.creditCards h6 {
+  align-self: start;
+}
+
+.cash {
+  color: black;
+  grid-area: cash;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  font-size: large;
+}
+
+.iflow {
+  background-color: greenyellow;
+  color: green;  
+}
+
+.oflow {
+  background-color: pink;
+  color: red;
+}
+
+.income,
+.outcome {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  border-radius: 10px;
+  height: 30%;
+}
+
+.iflow,
+.oflow{
+  border-radius: 20px;
+  padding: 5px;
+}
+
+.isign,
+.osign{
+  min-width: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+}
+
+.outcome {
+}
+
+.isign {
+  background-color: aquamarine;
+  color: white;
+}
+
+.osign {
+  background-color: darkslateblue;
+  color: white;
+}
+
+.cash  p {
+  align-self: center;
+  margin: 0px;
+}
+
+/* End Main  */
+
+
+/* Medium <= 992px */
+  
+@media screen and (max-width: 992px) {
+  .grid-container {
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.2fr 3fr;
+    grid-template-areas:
+      'header'
+      'main';
+  }
+
+  #sidebar {
+    display: none;
+  }
+
+  .menu-icon {
+    display: inline;
+  }
+
+  .sidebar-title > span {
+    display: inline;
+  }
+}
+/* Small <= 768px */
+  
+@media screen and (max-width: 768px) {
+  .main-cards {
+    grid-template-columns: 1fr;
+    gap: 10px;
+    margin-bottom: 0;
+  }
+
+  .charts {
+    grid-template-columns: 1fr;
+    margin-top: 30px;
+  }
+
+
+}
+.bar,
+.pie {
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+/* Extra Small <= 576px */
+
+@media screen and (max-width: 576px) {
+  .hedaer-left {
+    display: none;
+  }
+}

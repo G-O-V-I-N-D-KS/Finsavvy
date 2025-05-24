@@ -1,0 +1,165 @@
+
+* {
+   margin: 0;
+   padding: 0;
+
+}
+.whole
+{
+display: flex;
+justify-content: right;
+align-items: center;
+min-height: 100vh;
+background-image: linear-gradient(rgb(255, 255, 255), rgb(255, 255, 255));
+padding: 10px;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+.img1{
+   position: absolute;
+   width: 400px;
+   height: 400px;
+   left: 46px;;
+}
+.box1{
+position: relative;
+width: 400px;
+height: 510px;
+background: #00024C;
+border-radius: 17px;
+overflow: hidden;
+right: 55px;
+top: 5px;
+}
+
+.Signup_form {
+position: absolute;
+background: #ffffff;
+inset: 6px;
+border-radius: 10px;
+padding: 40px 40px;
+z-index: 2;
+display: flex;
+flex-direction: column;
+margin:0px;
+}
+.Signup_h1{
+color:rgb(10, 16, 28);
+font-size:1.9em;
+text-align:center;
+letter-spacing: 0.03em;
+
+}
+.inputbox1
+{
+position:relative;
+width:100%;
+margin-top:35px;
+
+}
+.inputbox1 input
+{
+position:relative;
+width:100%;
+padding: 20px 0px 10px;
+background: transparent;
+outline:none;
+border:none;
+box-shadow:none;
+color:rgb(8, 7, 7);
+font-size: .8em;
+letter-spacing: 0.05em;
+transition:.5s;
+z-index:10;
+}
+.inputbox1 span
+{
+position: absolute;
+left: 0px;
+padding: 0px 0px 10px;
+pointer-events: none;
+color: rgb(0, 0, 0);
+font-size: 1.1em;
+letter-spacing: 0.04em;
+transition: all 0.5s ease 0s;
+
+
+}
+.inputbox1 input:valid ~ span,
+.inputbox1 input:focus ~ span
+{
+color:rgb(0, 0, 0);
+font-size:0.80em;
+transform:translateY(-34px);
+
+
+}
+.inputbox1 p
+{
+position:absolute;
+left:0;
+bottom:0;
+width:100%;
+height:2px;
+background:rgb(39, 80, 99);
+border-radius:4px;
+overflow:hidden;
+transition:0.5s;
+pointer-events:none;
+margin-bottom:0px;
+
+}
+.inputbox1 input:valid ~ p,
+.inputbox1 input:focus ~ p
+{
+height: 2px;
+}
+
+.inputbox1 #togglepassword {
+position: absolute;
+
+right: 9px;
+top: 17px;
+z-index: 1; /* Ensure it's above other elements */
+} 
+
+
+
+.links
+{
+display:flex;
+justify-content: space-between;
+}
+.links a
+{
+margin:10px 0;
+font-size:0.8em;
+color:#211c5c;
+text-decoration: none;
+
+
+}
+.links a:hover,
+.links a:nth-child(2)
+{
+color:#68799b;
+
+}
+.box1 form  input[type="submit"]
+{
+border: none;
+outline: none;
+padding: 9px 25px;
+background: #00023c;
+border-radius: 4px;
+margin-top: 20px;
+color: white;
+font-size: 0.9em;
+font-weight: 600;
+cursor: pointer;
+}
+.box1 form  input[type="submit"]:active
+{
+opacity:0.8;
+}
+

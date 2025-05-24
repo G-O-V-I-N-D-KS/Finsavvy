@@ -1,0 +1,42 @@
+/* Table container styles */
+.table-container {
+    font-family: Arial, sans-serif;
+    margin-top: 20px;
+  }
+  
+  /* Table styles */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    border: 1px solid #ddd;
+  }
+  
+  /* Table header styles */
+  th {
+    background-color: #f2f2f2;
+    color: #333;
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  /* Table row styles */
+  tr {
+    border-bottom: 1px solid #ddd;
+  }
+  
+  /* Table cell styles */
+  td {
+    padding: 12px;
+  }
+  
+  /* Alternating row background color */
+  tr:nth-child(even) {
+    background-color: #f9f9f9;
+  }
+  
+  /* Hover effect on rows */
+  tr:hover {
+    background-color: #f1f1f1;
+  }
+  

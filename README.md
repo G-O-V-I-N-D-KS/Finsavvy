@@ -2,7 +2,7 @@
 
 **FinSavvy** is a full-stack personal finance management platform designed to help users track transactions, manage installments, receive timely reminders, and gain deep insights into their financial health.
 
-Built using the **MERN stack** (MongoDB, Express.js, React.js, Node.js) and integrated with the **Plaid API** to fetch real-time banking data.
+Built using the **MERN stack** (MongoDB, Express.js, React.js, Node.js) and integrated with the **Plaid API** to fetch banking data.
 
 ---
 

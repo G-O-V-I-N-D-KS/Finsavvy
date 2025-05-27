@@ -1,4 +1,4 @@
-# 💰 FinSavvy – Smart Finance Management Platform
+# 💰 FinSavvy – Finance Management Platform
 
 **FinSavvy** is a full-stack personal finance management platform designed to help users track transactions, manage installments, receive timely reminders, and gain deep insights into their financial health.
 
